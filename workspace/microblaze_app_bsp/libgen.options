@@ -1,0 +1,3 @@
+PROCESSOR=microblaze
+REPOSITORIES=
+HWSPEC=../microblaze/system.xml

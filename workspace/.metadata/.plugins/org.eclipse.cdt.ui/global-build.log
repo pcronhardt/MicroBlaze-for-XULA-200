@@ -1,0 +1,587 @@
+20:34:45 **** Build of project microblaze_app_bsp ****
+make -k all 
+libgen -hw ../microblaze/system.xml\
+	       \
+	       -pe microblaze \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../microblaze/system.xml -pe microblaze -log libgen.log
+system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mxl-soft-mul -mno-xl-reorder -mcpu=v8.40.a  -O2
+-c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mxl-soft-mul -mno-xl-reorder -mcpu=v8.40.a  -O2
+-c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+Compiling common
+Compiling standalone
+Compiling bram
+Compiling iomodule
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+20:34:52 **** Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2270	    268	   2084	   4622	   120e	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+20:35:47 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5062	    408	   2296	   7766	   1e56	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+18:45:40 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8490	    412	   2306	  11208	   2bc8	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+19:52:37 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8514	    412	   2306	  11232	   2be0	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+20:02:32 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:86:5: error: expected identifier or '(' before 'return'
+../src/helloworld.c:87:1: error: expected identifier or '(' before '}' token
+make: *** [src/helloworld.o] Error 1
+20:02:39 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8514	    412	   2306	  11232	   2be0	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+20:05:32 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8462	    412	   2300	  11174	   2ba6	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+20:06:07 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8486	    412	   2300	  11198	   2bbe	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+20:07:50 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8514	    412	   2306	  11232	   2be0	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+15:12:21 **** Clean-only build of configuration Debug for project microblaze_app ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  microblaze_app.elf.size  microblaze_app.elf.elfcheck  microblaze_app.elf
+ 
+15:12:22 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8514	    412	   2306	  11232	   2be0	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+15:16:32 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8514	    412	   2306	  11232	   2be0	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+15:17:32 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8530	    412	   2306	  11248	   2bf0	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+15:19:31 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:2: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/helloworld.c:70:2: note: use option -std=c99 or -std=gnu99 to compile your code
+make: *** [src/helloworld.o] Error 1
+15:21:35 **** Clean-only build of configuration Debug for project microblaze_app ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  microblaze_app.elf.size  microblaze_app.elf.elfcheck  microblaze_app.elf
+ 
+15:21:35 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -std=gnu99 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -std=gnu99 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8566	    412	   2300	  11278	   2c0e	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+15:21:46 **** Clean-only build of configuration Debug for project microblaze_app ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  microblaze_app.elf.size  microblaze_app.elf.elfcheck  microblaze_app.elf
+ 
+15:21:46 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -std=gnu99 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -std=gnu99 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8566	    412	   2300	  11278	   2c0e	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+15:22:19 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -std=gnu99 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8566	    412	   2300	  11278	   2c0e	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+15:23:05 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -std=gnu99 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8562	    412	   2306	  11280	   2c10	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+15:41:16 **** Clean-only build of configuration Debug for project microblaze_app ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  microblaze_app.elf.size  microblaze_app.elf.elfcheck  microblaze_app.elf
+ 
+15:41:17 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -std=gnu99 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -std=gnu99 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8486	    412	   2300	  11198	   2bbe	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 

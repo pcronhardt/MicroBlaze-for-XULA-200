@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\MyXilinx\microblaze\microblaze_top.ncd
+OUTFILE=D:\MyXilinx\microblaze\microblaze_top.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s200a-4vq100
+WORKINGDIR=D:\MyXilinx\microblaze
+LICENSE=WebPack
+USER_INFO=210479218_0_0_831

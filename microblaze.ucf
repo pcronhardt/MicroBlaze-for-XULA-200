@@ -1,0 +1,12 @@
+net clk loc=p43;
+
+net GPO1(0) loc=p50;  # Chan3
+net GPO1(1) loc=p52;  # Chan4
+net GPO1(2) loc=p56;  # Chan5
+net GPO1(3) loc=p57;  # Chan6
+net GPO1(4) loc=p72;  # Chan10
+net GPO1(5) loc=p73;  # Chan11
+net GPO1(6) loc=p35;  # Chan15
+net GPO1(7) loc=p34;  # Chan16
+net uartRx  loc=p33;  # Chan17
+net uartTx  loc=p32;  # Chan18

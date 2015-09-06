@@ -1,0 +1,39 @@
+15:41:17 **** Auto Build of configuration Debug for project microblaze_app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -std=gnu99 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -std=gnu99 -I../../microblaze_app_bsp/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: microblaze_app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_app_bsp/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze_app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze_app.elf  |tee "microblaze_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8486	    412	   2300	  11198	   2bbe	microblaze_app.elf
+Finished building: microblaze_app.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck microblaze_app.elf -hw ../../microblaze/system.xml -pe microblaze  |tee "microblaze_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../microblaze/system.xml -pe microblaze
+microblaze_app.elf 
+
+ELF file	: microblaze_app.elf
+elfcheck passed.
+Finished building: microblaze_app.elf.elfcheck
+ 
+
+15:41:18 Build Finished (took 1s.47ms)
+
